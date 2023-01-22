@@ -68,6 +68,7 @@ namespace UniversityProjectInWebAPI
                 builder.Services.AddScoped<IAllServices, AllServices>();
                 builder.Services.AddHttpContextAccessor();
                 builder.Services.AddValidatorsFromAssemblyContaining<AddUniversityValidator>();
+
                 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
                 builder.Services.AddEndpointsApiExplorer();
                 builder.Services.AddSwaggerGen();

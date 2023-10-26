@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniversityProjectInWebAPI", "UniversityProjectInWebAPI\UniversityProjectInWebAPI.csproj", "{2CE81D74-E232-4414-A9B6-C39FB3D4A6F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniversityWebAPI", "UniversityProjectInWebAPI\UniversityWebAPI.csproj", "{2CE81D74-E232-4414-A9B6-C39FB3D4A6F3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "DataAccess.EF\Repository.csproj", "{416AF05C-6DD9-4776-B16E-CB7EA267D422}"
 EndProject

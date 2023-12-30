@@ -17,11 +17,11 @@ namespace UniversityProjectInWebAPI.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddUniversity(AddUniversityCommand command)
+        public async Task<IActionResult> AddUniversityAsync(AddUniversityCommand command)
         {
             try
             {
-                await _allServices.UniversityService.AddUniversity(command, UserId);
+                await _allServices.UniversityService.AddUniversityAsync(command, UserId);
                 return OkResult("دانشگاه با موفقیت ساخته شد");
             }
             catch (Exception ex)
@@ -33,12 +33,12 @@ namespace UniversityProjectInWebAPI.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetListUniversity([FromQuery] SearchCommand command)
+        public async Task<IActionResult> GetListUniversityAsync([FromQuery] SearchCommand command)
         {
             try
             {
-                var result = await _allServices.UniversityService
-                    .GetListUniversity(command.PageNumber, command.PageSize, command.Search);
+                var result = await _allServices.UniversityService.GetListUniversityAsync(command.PageNumber,
+                    command.PageSize, command.Search);
                 return OkResult("نتیجه‌ی دانشگاه‌های جستجو شده", result.List, result.Count);
             }
             catch (Exception ex)

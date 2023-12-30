@@ -20,7 +20,7 @@ namespace Service.ControllersServices
             _unitOfWork = unitOfWork;
         }
 
-        public async Task AddUniversity(AddUniversityCommand command, Guid userId)
+        public async Task AddUniversityAsync(AddUniversityCommand command, Guid userId)
         {
             await Task.Run(() =>
             {
@@ -31,7 +31,7 @@ namespace Service.ControllersServices
             });
         }
 
-        public async Task<GetReturnDTO<UniversityDTO>> GetListUniversity(int pageNumber, int pageSize, string search)
+        public async Task<GetReturnDTO<UniversityDTO>> GetListUniversityAsync(int pageNumber, int pageSize, string search)
         {
             return await Task.Run(() =>
             {

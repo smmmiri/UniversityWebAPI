@@ -33,12 +33,12 @@ namespace UniversityProjectInWebAPI.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetListUniversity([FromQuery] SearchCommand command)
+        public async Task<IActionResult> GetListUniversityAsync([FromQuery] SearchCommand command)
         {
             try
             {
-                var result = await _allServices.UniversityService
-                    .GetListUniversity(command.PageNumber, command.PageSize, command.Search);
+                var result = await _allServices.UniversityService.GetListUniversityAsync(command.PageNumber,
+                    command.PageSize, command.Search);
                 return OkResult("نتیجه‌ی دانشگاه‌های جستجو شده", result.List, result.Count);
             }
             catch (Exception ex)

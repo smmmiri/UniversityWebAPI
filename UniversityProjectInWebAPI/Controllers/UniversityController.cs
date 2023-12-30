@@ -17,11 +17,11 @@ namespace UniversityProjectInWebAPI.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddUniversity(AddUniversityCommand command)
+        public async Task<IActionResult> AddUniversityAsync(AddUniversityCommand command)
         {
             try
             {
-                await _allServices.UniversityService.AddUniversity(command, UserId);
+                await _allServices.UniversityService.AddUniversityAsync(command, UserId);
                 return OkResult("دانشگاه با موفقیت ساخته شد");
             }
             catch (Exception ex)

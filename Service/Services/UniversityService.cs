@@ -20,7 +20,7 @@ namespace Service.ControllersServices
             _unitOfWork = unitOfWork;
         }
 
-        public async Task AddUniversity(AddUniversityCommand command, Guid userId)
+        public async Task AddUniversityAsync(AddUniversityCommand command, Guid userId)
         {
             await Task.Run(() =>
             {
